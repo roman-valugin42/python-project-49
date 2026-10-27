@@ -21,3 +21,8 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["brain_games*"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.3",
+]
