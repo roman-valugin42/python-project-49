@@ -7,7 +7,9 @@ authors = [
     { name = "roman-valugin42", email = "mrdrakenfels@mail.com" }
 ]
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "prompt>=0.4.1",
+]
 
 [project.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
@@ -15,6 +17,3 @@ brain-games = "brain_games.scripts.brain_games:main"
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
-
-[tool.hatch.build.targets.wheel]
-packages = ["brain_games"]
