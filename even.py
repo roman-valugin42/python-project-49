@@ -1,4 +1,3 @@
-# brain_games/even.py
 import random
 
 def is_even(number: int) -> bool:
