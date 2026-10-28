@@ -26,3 +26,7 @@ include = ["brain_games*"]
 dev = [
     "ruff>=0.17.3",
 ]
+
+[project.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.brain_even:main"
