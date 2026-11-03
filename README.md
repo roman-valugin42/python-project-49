@@ -24,8 +24,8 @@ cd python-project-49
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 brain-even-1 https://asciinema.org/a/LdCB9YV2IKUx3Nqj
-
 brain-calc-1 https://asciinema.org/a/z4ke30urLam9FpoA
+
 ---
 
 <details>
