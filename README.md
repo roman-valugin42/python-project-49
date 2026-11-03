@@ -29,6 +29,8 @@ brain-calc-1 https://asciinema.org/a/z4ke30urLam9FpoA
 
 brain-gcd-1 https://asciinema.org/a/Qt7KoDPqp3vzlL8U
 
+brain-progression-1 https://asciinema.org/a/7lTkutvtXys3e05c
+
 ---
 
 <details>
