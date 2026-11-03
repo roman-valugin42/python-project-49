@@ -27,6 +27,8 @@ brain-even-1 https://asciinema.org/a/LdCB9YV2IKUx3Nqj
 
 brain-calc-1 https://asciinema.org/a/z4ke30urLam9FpoA
 
+brain-gcd-1 https://asciinema.org/a/Qt7KoDPqp3vzlL8U
+
 ---
 
 <details>
