@@ -4,8 +4,11 @@ install:
 brain-games:
 	uv run brain-games
 
+test:
+    npm run test
+
 build:
-	uv build
+	UV_PYTHON=python3.12 uv build
 
 package-install:
 	uv tool install dist/*.whl
