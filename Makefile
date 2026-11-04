@@ -15,3 +15,9 @@ package-install:
 
 lint:
 	uv run ruff check brain_games
+
+ci-build:
+	UV_PYTHON=python3.12 uv sync --frozen && UV_PYTHON=python3.12 make build
+
+setup:
+    ci-build install lint test
