@@ -1,18 +1,24 @@
 import random
 
-def generate_progression(start: int = None, step: int = None) -> list[int]:
+MIN_START = 1
+MAX_START = 50
+MIN_STEP = -7
+MAX_STEP = 7
+
+def generate_progression(start=None, step=None):
     length = random.randint(5, 10)
-    if start is None:
-        start = random.randint(-20, 20)
-    if step is None:
-        while True:
-            step = random.randint(-9, 9)
-            if step != 0:
-                break
 
-    return [start + i * step for i in range(length)]
+    start = start or random.randint(MIN_START, MAX_START)
+    while True:
+        step = step or random.randint(MIN_STEP, MAX_STEP)
+        if step != 0:
+            break
 
-def generate_round() -> tuple[str, str]:
+    progression = [start + i * step for i in range(length)]
+    return progression
+
+
+def generate_round():
     progression = generate_progression()
     hidden_index = random.randint(0, len(progression) - 1)
 
@@ -23,6 +29,7 @@ def generate_round() -> tuple[str, str]:
     question = " ".join(question_list)
 
     correct_answer = str(progression[hidden_index])
+
     return question, correct_answer
 
 RULE = "What number is missing in the progression?"
