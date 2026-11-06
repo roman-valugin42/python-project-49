@@ -1,45 +1,106 @@
-# Игры разума (Python)
+# Brain Games
 
 [![hexlet-check](https://github.com/roman-valugin42/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/roman-valugin42/python-project-49/actions)
 
-Погрузитесь в экосистему Python и научитесь настраивать рабочее окружение. Подружитесь с менеджером зависимостей и линтером. Поймете, чем git отличается от GitHub, поработаете с внешними репозиториями. Получите опыт построения архитектуры полноценного приложения и написания чистого кода.
+Набор из пяти мини-игр для тренировки мозга. Работает в терминале через CLI.
 
-Учебный проект Хекслета: https://ru.hexlet.io/programs/python
-Как это должно работать: https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7
+## Доступные игры
 
-## Стек
+| Игра | Описание | Команда |
+|------|----------|---------|
+| **brain-even** | Определить, чётное число или нет | `brain-even` |
+| **brain-prime** | Определить, простое число или нет | `brain-prime` |
+| **brain-calc** | Вычислить результат выражения (+, −, ×) | `brain-calc` |
+| **brain-gcd** | Найти НОД двух чисел | `brain-gcd` |
+| **brain-progression** | Найти пропущенное число в прогрессии | `brain-progression` |
 
-- Python
+## Требования
+
+- Python >= 3.10
+- [uv](https://github.com/astral-sh/uv) — менеджер пакетов
 
 ## Установка
 
-<!-- Опишите установку: клонирование, зависимости, переменные окружения -->
+Установить все игры одновременно:
 
 ```bash
-git clone https://github.com/roman-valugin42/python-project-49.git
-cd python-project-49
+uv tool install --upgrade --force .
+```
+
+Или каждую игру отдельно:
+
+```bash
+uv tool install --upgrade --force --no-workspace .
+```
+
+После установки команды доступны напрямую, без `uv run`:
+
+```bash
+brain-calc
+brain-even
+brain-prime
+brain-gcd
+brain-progression
 ```
 
 ## Использование
 
-<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
-brain-even-1 https://asciinema.org/a/LdCB9YV2IKUx3Nqj
+Запуск любой игры — просто введите название команды:
 
-brain-calc-1 https://asciinema.org/a/z4ke30urLam9FpoA
+```bash
+brain-calc
+```
 
-brain-gcd-1 https://asciinema.org/a/Qt7KoDPqp3vzlL8U
+Игра задаст вопрос, вы ответите. Для победы нужно дать 3 правильных ответа подряд.
 
-brain-progression-1 https://asciinema.org/a/7lTkutvtXys3e05c
-
----
+### brain-even
 
 <details>
-<summary>Автоматические тесты Хекслета</summary>
+<summary>Успешная игра</summary>
 
-Тесты запускаются на каждый коммит. За запуск отвечает файл `.github/workflows/hexlet-check.yml` — не удаляйте и не переименовывайте ни его, ни репозиторий.
+[![asciicast](https://asciinema.org/a/LdCB9YV2IKUx3Nqj.svg)](https://asciinema.org/a/LdCB9YV2IKUx3Nqj)
 
 </details>
 
-## О Хекслете
+### brain-calc
 
-[Хекслет](https://ru.hexlet.io/) — школа программирования: авторские программы обучения с практикой, поддержкой наставников и реальными проектами, которые остаются в резюме. Этот репозиторий — один из таких проектов.
+<details>
+<summary>Успешная игра</summary>
+
+[![asciicast](https://asciinema.org/a/z4ke30urLam9FpoA.svg)](https://asciinema.org/a/z4ke30urLam9FpoA)
+
+</details>
+
+<details>
+<summary>Неудачная игра (неверный ответ)</summary>
+
+[![asciicast](https://asciinema.org/a/z4ke30urLam9FpoA.svg)](https://asciinema.org/a/z4ke30urLam9FpoA)
+
+</details>
+
+### brain-gcd
+
+<details>
+<summary>Игровой процесс</summary>
+
+[![asciicast](https://asciinema.org/a/Qt7KoDPqp3vzlL8U.svg)](https://asciinema.org/a/Qt7KoDPqp3vzlL8U)
+
+</details>
+
+### brain-progression
+
+<details>
+<summary>Игровой процесс</summary>
+
+[![asciicast](https://asciinema.org/a/7lTkutvtXys3e05c.svg)](https://asciinema.org/a/7lTkutvtXys3e05c)
+
+</details>
+
+## Автоматические тесты
+
+Проверка кода запускается на каждый коммит через GitHub Actions.
+Файл `.github/workflows/hexlet-check.yml` отвечает за запуск — не удаляйте и не переименовывайте его.
+
+## О проекте
+
+[Хекслет](https://ru.hexlet.io/) — школа программирования. Это учебный проект программы [Программист](https://ru.hexlet.io/programs/python).
