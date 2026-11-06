@@ -1,0 +1,13 @@
+{"version": 2, "width": 80, "height": 24, "timestamp": 1793710011, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+[5.265301, "o", "brain-progression\r\n"]
+[5.291801, "o", "May I have your name? "]
+[7.604544, "o", "Roman\r\nHello, Roman!\r\nWhat number is missing in the progression?\r\nQuestion: -13 .. -1 5 11 17 23 29 35\r\nYour answer: "]
+[23.406025, "o", "-7\r\nCorrect!\r\nQuestion: 13 16 19 22 25 28 31 34 .. 40\r\nYour answer: "]
+[31.856061, "o", "37\r\nCorrect!\r\nQuestion: -16 -8 0 8 16 24 32 40 .. 56\r\nYour answer: "]
+[39.141552, "o", "48\r\nCorrect!\r\nCongratulations, Roman!\r\n"]
+[41.12362, "o", "brain-progression\r\n"]
+[41.149204, "o", "May I have your name? "]
+[43.360273, "o", "Roman\r\nHello, Roman!\r\nWhat number is missing in the progression?\r\nQuestion: 3 7 .. 15 19\r\nYour answer: "]
+[51.868524, "o", "11\r\nCorrect!\r\nQuestion: -3 -2 -1 0 1 2 3 4 5 ..\r\nYour answer: "]
+[53.851616, "o", "2\r\n'2' is wrong answer ;(. Correct answer was '6'.\r\nLet's try again, Roman!\r\n"]
+[58.202008, "o", "exit\r\n"]
