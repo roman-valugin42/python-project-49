@@ -1,12 +1,16 @@
+import operator
 import random
 
+from prompt import string
+
 OPERATIONS = {
-    '+': lambda x, y: x + y,
-    '-': lambda x, y: x - y,
-    '*': lambda x, y: x * y,
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul,
 }
 
 MAX_MULTIPLIER = 30
+
 
 def generate_round():
     max_num = MAX_MULTIPLIER if '*' in OPERATIONS.keys() else 100
@@ -19,5 +23,15 @@ def generate_round():
     correct_answer = str(OPERATIONS[operation](num1, num2))
 
     return question, correct_answer
+
+
+def calc_welcome() -> str:
+    """Функция приветствия для игры calc."""
+    name = ""
+    while not name.strip():
+        name = string("May I have your name? ")
+    print(f"Hello, {name}!")
+    return name
+
 
 RULE = "What is the result of the expression?"

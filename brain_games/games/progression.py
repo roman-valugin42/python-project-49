@@ -1,9 +1,12 @@
 import random
 
+from prompt import string
+
 MIN_START = 1
 MAX_START = 50
 MIN_STEP = -7
 MAX_STEP = 7
+
 
 def generate_progression(start=None, step=None):
     length = random.randint(5, 10)
@@ -31,5 +34,15 @@ def generate_round():
     correct_answer = str(progression[hidden_index])
 
     return question, correct_answer
+
+
+def progression_welcome() -> str:
+    """Функция приветствия для игры progression."""
+    name = ""
+    while not name.strip():
+        name = string("May I have your name? ")
+    print(f"Hello, {name}!")
+    return name
+
 
 RULE = "What number is missing in the progression?"

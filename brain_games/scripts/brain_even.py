@@ -1,5 +1,6 @@
 from brain_games.engine import run
-from brain_games.games.even import generate_round, RULE, even_welcome
+from brain_games.games.even import RULE, even_welcome, generate_round
+
 
 def main():
     run(
@@ -9,6 +10,7 @@ def main():
             "WELCOME_FUNC": even_welcome
         })
     )
+
 
 if __name__ == "__main__":
     main()

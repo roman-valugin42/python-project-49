@@ -2,10 +2,15 @@ line-length = 80
 
 [lint]
 preview = true
-select = ["E", "F", "I", "C90", "UP", "B", "S", "FURB", "RUF"]
+select = ["E", "F", "I", "C90", "UP", "B", "FURB", "RUF"]
+ignore = ["RUF017"]
 
 [lint.per-file-ignores]
 # В init-модулях допустимы неиспользуемые импорты
 "__init__.py" = ["unused-import"]
 # assert в тестах это норма pytest
 "tests/**" = ["assert"]
+# в играх не используем криптографический random
+"brain_games/games/**/*.py" = ["S311", "S101"]
+"brain_games/even.py" = ["S311", "S101"]
+"brain_games/prime.py" = ["S311", "S101"]

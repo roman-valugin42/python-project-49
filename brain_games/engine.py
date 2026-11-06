@@ -2,6 +2,7 @@ from prompt import string
 
 ROUNDS_TO_WIN = 3
 
+
 def run(game):
     name = game.WELCOME_FUNC()
 
@@ -14,7 +15,9 @@ def run(game):
         user_answer = string("Your answer: ").strip().lower()
 
         if user_answer != correct_answer.lower():
-            print(f"'{user_answer}' is wrong answer ;(.Correct answer was '{correct_answer}'.")
+            msg = f"'{user_answer}' is wrong answer ;("
+            msg += f". Correct answer was '{correct_answer}'."
+            print(msg)
             print(f"Let's try again, {name}!")
             return
 
