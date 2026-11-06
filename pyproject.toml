@@ -1,7 +1,7 @@
 [project]
-name = "brain-games"
-version = "1.0.0"
-description = "Brain Games — набор CLI-игр для тренировки мозга"
+name = "hexlet-code"
+version = "0.1.0"
+description = "Brain Games project"
 readme = "README.md"
 authors = [
     { name = "roman-valugin42", email = "mrdrakenfels@mail.com" }
