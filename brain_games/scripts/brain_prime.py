@@ -1,11 +1,10 @@
-from brain_games.engine import run
+from brain_games.engine import make_game, run
 from brain_games.games.prime import RULE, generate_round, prime_welcome
 
 
 def main():
-    run(game=type('', (object,), {"generate_round": generate_round,
-                                  "RULE": RULE,
-                                  "WELCOME_FUNC": prime_welcome}))
+    game = make_game(RULE, generate_round, prime_welcome)
+    run(game)
 
 
 if __name__ == "__main__":

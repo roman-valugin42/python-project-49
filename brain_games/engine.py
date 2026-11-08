@@ -3,6 +3,24 @@ from prompt import string
 ROUNDS_TO_WIN = 3
 
 
+def default_welcome() -> str:
+    """Стандартная функция приветствия."""
+    name = ""
+    while not name.strip():
+        name = string("May I have your name? ")
+    print(f"Hello, {name}!")
+    return name
+
+
+def make_game(rule, generate_round, welcome_func):
+    """Фабрика для создания объекта игры."""
+    return type("", (), {
+        "RULE": rule,
+        "generate_round": generate_round,
+        "WELCOME_FUNC": welcome_func,
+    })
+
+
 def run(game):
     name = game.WELCOME_FUNC()
 
@@ -11,7 +29,7 @@ def run(game):
     for _ in range(ROUNDS_TO_WIN):
         question, correct_answer = game.generate_round()
         print(f"Question: {question}")
-        
+
         user_answer = string("Your answer: ").strip().lower()
 
         if user_answer != correct_answer.lower():

@@ -5,10 +5,10 @@ brain-games:
 	uv run brain-games
 
 test:
-	npm run test
+	uv run pytest
 
 build:
-	UV_PYTHON=python3.12 uv build
+	uv build
 
 package-install:
 	uv tool install dist/*.whl
@@ -17,7 +17,7 @@ lint:
 	uv run ruff check brain_games
 
 ci-build:
-	UV_PYTHON=python3.12 uv sync --frozen && UV_PYTHON=python3.12 make build
+	uv sync --frozen && make build
 
 setup:
 	ci-build install lint test

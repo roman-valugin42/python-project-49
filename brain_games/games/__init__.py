@@ -1,1 +1,1 @@
-# brain_games.games — модуль с реализациями игр
+# brain_games.games package

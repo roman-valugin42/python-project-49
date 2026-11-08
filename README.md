@@ -21,16 +21,18 @@
 
 ## Установка
 
-Установить все игры одновременно:
+Клонировать репозиторий:
 
 ```bash
-uv tool install --upgrade --force .
+git clone https://github.com/roman-valugin42/python-project-49.git
+cd python-project-49
 ```
 
-Или каждую игру отдельно:
+Собрать и установить пакет:
 
 ```bash
-uv tool install --upgrade --force --no-workspace .
+make build
+make package-install
 ```
 
 После установки команды доступны напрямую, без `uv run`:
