@@ -12,22 +12,13 @@ def default_welcome() -> str:
     return name
 
 
-def make_game(rule, generate_round, welcome_func):
-    """Фабрика для создания объекта игры."""
-    return type("", (), {
-        "RULE": rule,
-        "generate_round": generate_round,
-        "WELCOME_FUNC": welcome_func,
-    })
+def run(rule, generate_round, welcome_func):
+    name = welcome_func()
 
-
-def run(game):
-    name = game.WELCOME_FUNC()
-
-    print(game.RULE)
+    print(rule)
 
     for _ in range(ROUNDS_TO_WIN):
-        question, correct_answer = game.generate_round()
+        question, correct_answer = generate_round()
         print(f"Question: {question}")
 
         user_answer = string("Your answer: ").strip().lower()

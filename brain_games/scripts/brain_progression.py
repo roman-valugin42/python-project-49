@@ -1,4 +1,4 @@
-from brain_games.engine import make_game, run
+from brain_games.engine import run
 from brain_games.games.progression import (
     RULE,
     generate_round,
@@ -7,8 +7,7 @@ from brain_games.games.progression import (
 
 
 def main():
-    game = make_game(RULE, generate_round, progression_welcome)
-    run(game)
+    run(RULE, generate_round, progression_welcome)
 
 
 if __name__ == "__main__":
